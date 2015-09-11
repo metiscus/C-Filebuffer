@@ -20,5 +20,6 @@ extern struct filebuffer_t* filebuffer_new(FILE *fp, uint32_t size);
 extern void filebuffer_delete(struct filebuffer_t* buffer);
 extern void filebuffer_fill(struct filebuffer_t * buffer, uint32_t n);
 extern uint32_t filebuffer_get(struct filebuffer_t * buffer, char* data, uint32_t n);
+extern void filebuffer_reset(struct filebuffer_t* buffer, FILE *fp);
 
 #endif // FILEBUFFER_H_INCLUDED

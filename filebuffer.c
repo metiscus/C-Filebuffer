@@ -95,3 +95,13 @@ uint32_t filebuffer_get(struct filebuffer_t * buffer, char* data, uint32_t n)
 
     return ret;
 }
+
+void filebuffer_reset(struct filebuffer_t* buffer, FILE *fp)
+{
+    if(buffer)
+    {
+        buffer->cursor = buffer->data;
+        buffer->end = buffer->data + 1;
+        buffer->fp = fp;
+    }
+}
